@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MultiSelect from './components/MultiSelect';
+import SingleSelect from './components/SingleSelect';
+import InfiniteCalender from './components/InfiniteCalender';
+import { RangePicker, DatePicker } from './components/DateRange';
+
+const styles = {
+  display: 'block',
+  minWidth: '500px',
+  margin: '50px auto',
+}
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={styles}><SingleSelect/></div>
+      <div style={styles}><MultiSelect/></div>
+      <div style={styles}><InfiniteCalender/></div>
+      <div style={styles}><RangePicker/></div>
+      <div style={styles}><DatePicker/></div>
+      
+      
+      
     </div>
   );
 }
